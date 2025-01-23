@@ -66,10 +66,12 @@ static LIBRARY: LazyLock<LazyHash<Library>> = LazyLock::new(|| {
 
     // Adjust the default look.
     lib.styles
-        .set(PageElem::set_width(Smart::Custom(Abs::pt(240.0).into())));
-    lib.styles.set(PageElem::set_height(Smart::Auto));
-    lib.styles.set(PageElem::set_margin(Margin::splat(Some(Smart::Custom(
-        Abs::pt(15.0).into(),
+        .set(PageElem::set_width(Smart::Auto)); // Dynamically adjusts page width based on content.
+    lib.styles
+        .set(PageElem::set_height(Smart::Auto)); // Dynamically adjusts page height based on content.
+    lib.styles
+        .set(PageElem::set_margin(Margin::splat(Some(Smart::Custom(
+            Abs::pt(15.0).into(), // Consistent margin for spacing.
     )))));
 
     LazyHash::new(lib)
