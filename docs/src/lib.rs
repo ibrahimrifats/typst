@@ -64,6 +64,7 @@ static LIBRARY: LazyLock<LazyHash<Library>> = LazyLock::new(|| {
     scope.define_type::<NoneValue>();
     scope.define_type::<AutoValue>();
 
+    
     // Adjust the default look.
     lib.styles
         .set(PageElem::set_width(Smart::Auto)); // Dynamically adjusts page width based on content.

@@ -15,3 +15,4 @@ mod tests {
         assert_eq!(grid_template_columns, [Smart::Custom(Abs::pt(1.0).into()), Smart::Custom(Abs::pt(2.0).into())]);
     }
 }
+
